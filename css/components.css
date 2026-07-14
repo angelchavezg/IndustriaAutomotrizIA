@@ -1,56 +1,76 @@
-/* ===========================
-   Navegación (header tipo glass)
-   =========================== */
+/* =======================================
+   Navegación (Capa de contenido limpia)
+   ======================================= */
 .glass-header {
-  position: fixed;           /* Barra fija arriba */
+  position: fixed;             
   top: 0;
   margin-top: 20px;
   left: 50%;
-  transform: translateX(-50%); /* Centrada horizontalmente */
+  transform: translateX(-50%); 
   width: 100%;
   max-width: 1200px;
-  height: 70px;
-  padding: 0 35px;
-  display: flex;
-  align-items: center;
+  height: 70px;                
   z-index: 100;
-  background: rgba(255, 255, 255, 0.05); /* Fondo semitransparente */
-  backdrop-filter: blur(20px);           /* Efecto glass */
+  
+  /* El contenedor padre ahora controla los bordes y sombras */
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); /* Sombra */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  overflow: hidden; 
 }
 
-.glass-header ul li {
-  opacity: 0; /* Ocultos para animación */
+/* NUEVA CLASE: Modifica el comportamiento del componente de vidrio */
+.glass-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Se queda atrás */
+  pointer-events: none; /* Permite hacer clic a través del vidrio */
+  border-radius: inherit;
 }
 
+/* Tu contenedor de enlaces ahora flota al frente */
 .nav-container {
+  position: relative;
+  z-index: 2; /* Pasa al frente del vidrio */
   display: flex;
-  justify-content: space-between; /* Logo a la izquierda, links a la derecha */
+  justify-content: space-between; 
   align-items: center;
   width: 100%;
+  height: 100%;                
+  padding: 0 35px;             
+  box-sizing: border-box;
+}
+
+/* --- El resto de tus estilos se mantienen idénticos --- */
+.glass-header ul li {
+  opacity: 0; 
 }
 
 .logo {
-  font-family: "Special Gothic", sans-serif; /* Tipografía del logo */
-  font-variation-settings: "wght" 700, "wdth" 87.5; /* Peso y ancho */
+  font-family: "Special Gothic", sans-serif;
+  font-variation-settings: "wght" 700, "wdth" 87.5;
   font-style: normal;
   font-size: 24px;
   color: #00aaff;
   text-transform: uppercase;
-  opacity: 0; /* Inicialmente oculto para animación */
+  opacity: 0; 
 }
 
 .nav-links {
   display: flex;
-  gap: 20px;                 /* Espacio entre enlaces */
-  justify-content: flex-end; /* Alineados a la derecha */
+  gap: 20px;
+  justify-content: flex-end;
   flex: 1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links li a {
-  font-family: "Special Gothic", sans-serif; /* Tipografía de enlaces */
+  font-family: "Special Gothic", sans-serif;
   font-variation-settings: "wght" 700, "wdth" 80;
   font-style: normal;
   color: #ffffff;
@@ -58,13 +78,13 @@
   text-transform: uppercase;
   padding: 10px 15px;
   border-radius: 12px;
-  transition: all 0.3s ease; /* Transición suave */
+  transition: all 0.3s ease;
 }
 
 .nav-links li a:hover,
 .nav-links li a.active {
-  background-color: rgba(0, 100, 255, 0.2); /* Fondo al pasar el mouse */
-  color: #00aaff;                           /* Color destacado */
+  background-color: rgba(0, 100, 255, 0.2);
+  color: #00aaff;
 }
 
 @keyframes fadeInLogo {
@@ -300,8 +320,8 @@ input[type="checkbox"] {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 95%; /* aire lateral móvil, si se quiere que ocupe toda la pantalla modificarlo a 100%*/
-  max-width: 1200px;   /* igual que las secciones */
+  width: 90%; /* aire lateral móvil, si se quiere que ocupe toda la pantalla modificarlo a 100%*/
+  max-width: 400px;   /* igual que las secciones */
   margin-top: 20px;
   padding: 0 35px;
   box-sizing: border-box; /* incluye padding/border en el cálculo */
@@ -380,7 +400,7 @@ input[type="checkbox"] {
     align-items: center;      /* centra horizontalmente */
     text-align: center;       /* centra el texto */
     gap: 20px;                /* espacio entre texto e imagen */
-    padding: 30px 20px;       /* reduce padding para móvil */
+    padding: 30px 10px;       /* reduce padding para móvil */
     width: 85%; /* aire lateral móvil, si se quiere llenar toda la pantalla eliminar*/
   }
 
@@ -392,14 +412,14 @@ input[type="checkbox"] {
   }
 
   .glass-section h2{
-    font-size: 32px;
+    font-size: 1.5rem;
   }
 
   .glass-text {
     flex: 1 1 auto;
     padding-right: 0;         /* elimina espacio lateral */
     width: 100%;
-    font-size: 12px;
+    font-size: 0.8rem;
   }
 
   .glass-image,
@@ -426,9 +446,11 @@ input[type="checkbox"] {
   .header-gallery {
   height: 182.14px;
   }
+
   .slide {
     flex: 0 0 100%; /* cada slide ocupa todo el ancho */
   }
+
   .slide img {
     height: 100%; /* cubre toda la altura del contenedor */
   }
@@ -458,5 +480,17 @@ input[type="checkbox"] {
   .footer-copy {
     margin-top: 20px;
     text-align: center;
+  }
+
+  #futuro {
+    margin-bottom: 50px; /* espacio extra debajo */
+  }
+  
+  #sugerencias {
+    margin-bottom: 50px; /* espacio extra debajo */
+  }
+  
+  #integrantes {
+    margin-bottom: 50px; /* espacio extra debajo */
   }
 }

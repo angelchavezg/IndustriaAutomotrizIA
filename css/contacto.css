@@ -96,7 +96,7 @@
     align-items: center;      /* centra horizontalmente */
     margin: 0 auto;           /* asegura centrado del contenedor */
     margin-top: 120px;
-    padding: 30px 20px;       /* reduce padding en móvil */
+    padding: 30px 10px;       /* reduce padding en móvil */
   }
 
   .formulario-retro h2 {

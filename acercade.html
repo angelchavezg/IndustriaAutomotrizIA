@@ -7,11 +7,23 @@
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/components.css" />
   <link rel="stylesheet" href="css/acercade.css" />
+  <script src="displacement-utils.js"></script>
+  <script src="glass-element.js"></script>
 </head>
 <body>
   <div class="blue-background"></div>
 
   <header class="glass-header">
+    <glass-element
+    class="glass-bg"
+    radius="20"
+    depth="4"
+    blur="2"
+    strength="30"
+    chromatic-aberration="1"
+    background-color="rgba(255,255,255,0.15)">
+    </glass-element>
+    
     <nav class="nav-container">
       <a href="index.html" class="logo">ISC Equipo 3</a>
       <label for="menu" class="mobile-menu-toggle">
@@ -48,27 +60,27 @@
       <div class="team-grid">
         <div class="team-member">
           <div class="photo-circle">
-            <img src="img/persona.jpg" alt="Miembro del equipo 1" />
+            <img src="assets/member1.jpeg" alt="Miembro del equipo 1" />
           </div>
           <p class="nombre">Carlo Corona Estrada</p>
         </div>
         
         <div class="team-member">
           <div class="photo-circle">
-            <img src="img/persona.jpg" alt="Miembro del equipo 2" />
+            <img src="assets/member2.jpg" alt="Miembro del equipo 2" />
           </div>
           <p class="nombre">Ángel Chávez García</p>
         </div>
         
         <div class="team-member">
           <div class="photo-circle">
-            <img src="img/persona.jpg" alt="Miembro del equipo 3" />
+            <img src="assets/member3.jpg" alt="Miembro del equipo 3" />
           </div>
           <p class="nombre">Santiago Ramírez Saldaña</p>
         </div>
         <div class="team-member">
           <div class="photo-circle">
-            <img src="img/persona.jpg" alt="Miembro del equipo 4" />
+            <img src="assets/member4.jpg" alt="Miembro del equipo 4" />
           </div>
           <p class="nombre">Federico Vargas López</p>
         </div>

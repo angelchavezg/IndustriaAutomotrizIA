@@ -6,6 +6,8 @@
   <title>La Inteligencia Artificial en el sector automotriz</title>
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/components.css" />
+  <script src="displacement-utils.js"></script>
+  <script src="glass-element.js"></script>
 </head>
 
 <body>
@@ -13,14 +15,28 @@
   <div class="blue-background"></div>
   <!-- Barra de navegación glass -->
   <header class="glass-header">
+    
+    <glass-element
+    class="glass-bg"
+    radius="20"
+    depth="4"
+    blur="2"
+    strength="30"
+    chromatic-aberration="1"
+    background-color="rgba(255,255,255,0.15)">
+    </glass-element>
+    
     <nav class="nav-container">
       <a href="#" class="logo">ISC Equipo 3</a>
+      
       <label for="menu" class="mobile-menu-toggle">
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
       </label>
+      
       <input type="checkbox" id="menu" />
+      
       <ul class="nav-links">
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#ia">IA</a></li>
@@ -43,11 +59,11 @@
     </div>
     <div class="glass-image header-gallery">
       <div class="slides-track">
-      <div class="slide"><img src="img/panoramaia.png" alt="Foto 1"></div>
-      <div class="slide"><img src="img/vehiculoAutonomo.jpg" alt="Foto 2"></div>
-      <div class="slide"><img src="img/herramientas.png" alt="Foto 3"></div>
-      <div class="slide"><img src="img/actualidad.jpg" alt="Foto 4"></div>
-      <div class="slide"><img src="img/vehiculoAutonomo.jpg" alt="Foto 5"></div>
+      <div class="slide"><img src="img/exterior_YuanPlus.webp" alt="Foto 1"></div>
+      <div class="slide"><img src="img/interior_YuanPlus.webp" alt="Foto 2"></div>
+      <div class="slide"><img src="img/exterior_YuanPlus2.webp" alt="Foto 3"></div>
+      <div class="slide"><img src="img/exterior_DolphinMini.webp" alt="Foto 4"></div>
+      <div class="slide"><img src="img/exterior_YuanPlus.webp" alt="Foto 5"></div>
     </div>
     </div>
   </div>
@@ -65,7 +81,7 @@
       </div>
 
       <figure class="glass-image">
-        <img src="img/panoramaia.png" alt="Descripción breve de la foto">
+        <img src="img/panoramaia.webp" alt="Panorama IA">
         <figcaption>Vehículo Definido por Software (Software-Defined Vehicle)</figcaption>
       </figure>
     </section>
@@ -74,11 +90,11 @@
       <div class="glass-text">
         <h3>Sector Automotriz</h3>
         <h2>La adopción de nuevas herramientas</h2>
-        <p>Sistemas avanzados de asistencia al conductor: frenado automático de emergencia, control crucero adaptativo, 
-          asistencia de mantenimiento de carril, detección de peatones, advertencia de punto ciego. Todos estos usan IA de visión y fusión de sensores</p>
-        <p>Conducción parcialmente automatizada: el auto puede acelerar, frenar y girar en ciertas condiciones (autopista, buen clima), pero el conductor sigue siendo responsable.</p>
-        <p>Monitoreo del conductor: cámaras internas o sensores que detectan distracción o fatiga y dan una alerta.</p>
-        <p>Servicios inteligentes para el usuario: asistentes de voz basados en IA que explican testigos del tablero, recomiendan ir al taller o buscan la mejor ruta.</p>
+        <p>Sistemas avanzados de asistencia al conductor como frenado automático de emergencia, control crucero adaptativo, 
+          asistencia de mantenimiento de carril, detección de peatones, advertencia de punto ciego. Todos estos usan IA de visión y fusión de sensores.</p>
+        <p>Conducción parcialmente automatizada, tenemos que el auto puede acelerar, frenar y girar en ciertas condiciones (autopista, buen clima), pero el conductor sigue siendo responsable.</p>
+        <p>Monitoreo del conductor permanente por mediio de cámaras internas o sensores que detectan distracción o fatiga y dan una alerta.</p>
+        <p>Servicios inteligentes para el usuario como lo son asistentes de voz basados en IA que explican testigos del tablero, recomiendan ir al taller o buscan la mejor ruta.</p>
 
         <h2>Aplicaciones</h2>
         <p class="bullet">Percepción: el vehículo “ve” con cámaras, radar, lidar y ultrasonido.</p>
@@ -89,11 +105,11 @@
 
       <div class="glass-image-group">
         <figure class="glass-image">
-          <img src="img/herramientas.png" alt="Descripción breve de la foto">
+          <img src="img/herramientas.webp" alt="Herramientas">
           <figcaption>Servicios inteligentes</figcaption>
         </figure>
         <figure class="glass-image">
-          <img src="img/aplicaciones.jpg" alt="Descripción breve de la foto">
+          <img src="img/aplicaciones.webp" alt="Aplicaciones">
           <figcaption>Toma de decisiones y aprendizaje</figcaption>
         </figure>
       </div>
@@ -121,11 +137,11 @@
       
       <div class="glass-image-group">
         <figure class="glass-image">
-          <img src="img/actualidad.jpg" alt="Descripción breve de la foto">
+          <img src="img/actualidad.webp" alt="Actualidad">
           <figcaption>Probar que es segura siempre</figcaption>
         </figure>
         <figure class="glass-image">
-          <img src="img/ciberseguridad.jpg" alt="Descripción breve de la foto">
+          <img src="img/ciberseguridad.webp" alt="Ciberseguridad">
           <figcaption>Ciberseguridad del vehículo</figcaption>
         </figure>
       </div>
@@ -141,8 +157,8 @@
         <p>Por otra parte en las fábricas, la IA también se usa para automatizar la producción, predecir fallas mecánicas y optimizar la logística, reduciendo costos y errores humanos.</p>
       </div>
       <figure class="glass-image">
-        <img src="img/vehiculoAutonomo.jpg" alt="Descripción breve de la foto">
-        <figcaption>Fotografía del interior de un coche autónomo futurista</figcaption>
+        <img src="img/asistenciaConductor.webp" alt="Asistencia Conductor">
+        <figcaption>Sistemas avanzados de asistencia al conductor</figcaption>
       </figure>
     </section>
 
@@ -158,8 +174,8 @@
         <p>Si eso se usa para entrenar IA o para vender servicios, se necesita transparencia y protección de datos. Los estudios de consumidores mustran que la gente si quiere seguridad, pero no quiere que sus datos se usen sin permiso.</p>
       </div>
       <figure class="glass-image">
-        <img src="img/vehiculoAutonomo.jpg" alt="Descripción breve de la foto">
-        <figcaption>Fotografía del interior de un coche autónomo futurista</figcaption>
+        <img src="img/garantias.webp" alt="Garantías">
+        <figcaption>Historial de grabaciones durante el trayecto</figcaption>
       </figure>
     </section>
 
@@ -174,8 +190,8 @@
         <p>La IA también permitirá crear experiencias personalizadas, donde el vehículo reconozca al conductor, adapte su entorno y planifique rutas según sus hábitos y necesidades.</p>
       </div>
       <figure class="glass-image">
-        <img src="img/vehiculoAutonomo.jpg" alt="Descripción breve de la foto">
-        <figcaption>Fotografía del interior de un coche autónomo futurista</figcaption>
+        <img src="img/futuroAutomotriz.webp" alt="Futuro Automotriz">
+        <figcaption>Waymo lanzará taxis sin chofer en Texas, EE.UU para 2026</figcaption>
       </figure>
     </section>
   </main>
@@ -240,14 +256,4 @@
   </script>
   
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-

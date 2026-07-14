@@ -7,12 +7,24 @@
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/components.css" />
   <link rel="stylesheet" href="css/contacto.css" />
+  <script src="displacement-utils.js"></script>
+  <script src="glass-element.js"></script>
 </head>
 <body>
   <!-- Fondo de página web -->
   <div class="blue-background"></div>
   <!-- Barra de navegación glass -->
   <header class="glass-header">
+    <glass-element
+    class="glass-bg"
+    radius="20"
+    depth="4"
+    blur="2"
+    strength="30"
+    chromatic-aberration="1"
+    background-color="rgba(255,255,255,0.15)">
+    </glass-element>
+    
     <nav class="nav-container">
       <a href="index.html" class="logo">ISC Equipo 3</a>
       <label for="menu" class="mobile-menu-toggle">
@@ -49,7 +61,7 @@
       </div>
       
       <div class="formulario-imagen">
-        <img src="img/vehiculoAutonomo.jpg" alt="Imagen decorativa de sugerencias" />
+        <img src="img/vehiculoAutonomo.webp" alt="Imagen decorativa de sugerencias" />
       </div>
     </section>
   </main>
